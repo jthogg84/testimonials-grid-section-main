@@ -1,0 +1,163 @@
+:root {
+  --mod-violet:hsl(263, 55%, 52%);
+  --very-dark-greyish-blue:hsl(217, 19%, 35%);
+  --very-drak-blackish-blue: hsl(219 , 29%, 14%);
+  --white:hsl(0, 0%, 100%);
+  --light-grey:hsl(0, 0% ,81%);
+  --light-greyish-blue:hsl(210, 46%, 95%);
+  --opacity-50:50%;
+  --opacity-50:70%;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pad-none {
+  padding: 0;
+}
+
+.mar-none {
+  margin: none;
+}
+
+body {
+  margin-block: 2rem;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--light-greyish-blue);
+  height: 100vh;
+}
+
+.grid-container {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 70rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+      grid-template-areas: "one one two five" "three four four five";
+  place-content: center;
+}
+
+.testimonials {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.profile-info {
+  margin-bottom: 1rem;
+}
+
+.profile-info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-info .name h1, .profile-info .name p {
+  margin-block: 0;
+  margin-left: 1rem;
+}
+
+.one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: one;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-position: top 5px right 30px;
+  background-repeat: no-repeat;
+  color: var(--white);
+  background-color: var(--mod-violet);
+}
+
+.two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: two;
+  background-color: var(--very-dark-greyish-blue);
+  color: var(--white);
+}
+
+.three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: three;
+  background-color: var(--white);
+}
+
+.four {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: four;
+  background-color: var(--very-drak-blackish-blue);
+  color: var(--white);
+}
+
+.five {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: five;
+  background-color: var(--white);
+}
+
+.three, .five {
+  color: var(--very-dark-greyish-blue);
+}
+
+@media screen and (max-width: 863px) {
+  .grid-container {
+    position: relative;
+    left: 50%;
+    max-width: 30rem;
+    display: block;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .testimonials {
+    margin: 1rem 0.75em;
+  }
+}
+
+.one .name, .one .tagline, .two .name, .two .tagline, .four .name, .four .tagline {
+  color: var(--white);
+}
+
+.one .vg, .one .quote, .two .vg, .two .quote, .four .vg, .four .quote {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.one img, .two img, .four img {
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.three .name, .three .tagline {
+  color: var(--very-dark-greyish-blue);
+}
+
+.three .vg, .three .quote {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.five .name, .five .tagline {
+  color: var(--very-dark-greyish-blue);
+}
+
+.five .vg, .five .quote {
+  color: rgba(72, 85, 106, 0.5);
+}
+/*# sourceMappingURL=main.css.map */
